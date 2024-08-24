@@ -20,24 +20,31 @@
 </head>
 <body>
     
-    <div class="w-100 d-flex flex-column justify-content-center p-5">
-        <h4>Sala virtual</h4>
-        <div class="card">
-            <div class="d-flex">
-                <div class="d-flex p-1">
-                    <input type="text" placeholder="ID" id="txtID">
-                    <button id="btnStatus" onclick="connect()">Connect</button>
-                </div>
-                <div class="col-1 p-3 text-danger justify-content-center align-items-center">
-                    <p class="m-0" id="statusConnection">OFF</p>
-                </div>
-                <div class="col-7 p-3 justify-content-center align-items-center">
-                    <p class="m-0 text-danger" id="exception" ></p>
-                </div>
-                <div class="d-flex p-1 align-items-center">
-                    <button id="btnDisconnect" class="disabled" onclick="disconnect()">Disconnect</button>
+    <div class="w-100 h-100 p-5">
+
+        <div class="d-flex flex-column justify-content-center">
+            <h4>Sala virtual</h4>
+            <div class="card">
+                <div class="d-flex">
+                    <div class="d-flex p-1">
+                        <input type="text" placeholder="ID" id="txtID">
+                        <button id="btnStatus" onclick="connect()">Connect</button>
+                    </div>
+                    <div class="col-1 p-3 text-danger justify-content-center align-items-center">
+                        <p class="m-0" id="statusConnection">OFF</p>
+                    </div>
+                    <div class="col-7 p-3 justify-content-center align-items-center">
+                        <p class="m-0 text-danger" id="exception" ></p>
+                    </div>
+                    <div class="d-flex p-1 align-items-center">
+                        <button id="btnDisconnect" class="disabled" onclick="disconnect()">Disconnect</button>
+                    </div>
                 </div>
             </div>
+        </div>
+
+        <div class="d-fex justify-content-between">
+            
         </div>
     </div>
     <script src="https://cdn.socket.io/4.7.5/socket.io.min.js" integrity="sha384-2huaZvOR9iDzHqslqwpR87isEmrfxqyWOF7hr7BY6KG0+hVKLoEXMPUJw3ynWuhO" crossorigin="anonymous"></script>
