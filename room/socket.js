@@ -27,6 +27,7 @@ function connect() {
             connection.socket = io('http://0.0.0.0:3000', {
                 path: "/beautyfy_vituals/",
                 transports: ['websocket'],
+                query: { roomType: 'schedule', user: identity }
             });
 
             connection.socket.on('connect', () => {
