@@ -40,6 +40,11 @@ function connect() {
                 this.btnStatus.classList.add('disabled');
                 document.querySelector("#txtID").classList.add('disabled');
                 this.btnDisconnect.classList.remove('disabled');
+
+                connection.socket.emit('authSessionRoomSchedule');
+                connection.socket.on('online_user_room_schedule', (users) => {
+                    debugger
+                });
             });
 
             connection.socket.on('connect_error', (error) => {
