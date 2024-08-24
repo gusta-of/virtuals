@@ -6,6 +6,7 @@ function disconnect() {
     connection.socket.disconnect();
     this.exception.innerHTML = `Desconectado`;
     this.btnStatus.classList.remove('disabled');
+    document.querySelector("#txtID").classList.remove('disabled');
     this.btnDisconnect.classList.add('disabled');
     this.statusConnection.classList.add('text-danger');
     this.statusConnection.innerHTML = 'OFF';
@@ -37,6 +38,7 @@ function connect() {
                 this.statusConnection.classList.add('text-success');
                 this.statusConnection.innerHTML = 'ON';
                 this.btnStatus.classList.add('disabled');
+                document.querySelector("#txtID").classList.add('disabled');
                 this.btnDisconnect.classList.remove('disabled');
             });
 
