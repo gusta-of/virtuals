@@ -1,0 +1,36 @@
+[
+    {
+        "professional": {
+            "$oid": "65a2930e22a3d827500771db"
+        },
+        "room": {
+            "$oid": "66cb23b97c4d0bdad8134e97"
+        },
+        "notified": false,
+        "status": null,
+        "comment": null,
+        "createdAt": {
+            "$date": "2024-08-25T00:00:00.000+00:00"
+        },
+        "updatedAt": {
+            "$date": "2024-08-25T00:00:00.000+00:00"
+        }
+    },
+    {
+        "professional": {
+            "$oid": "66425c707fb78e00111f23d4"
+        },
+        "room": {
+            "$oid": "66cb23b97c4d0bdad8134e97"
+        },
+        "notified": false,
+        "status": null,
+        "comment":  null,
+        "createdAt": {
+            "$date": "2024-08-25T00:00:00.000+00:00"
+        },
+        "updatedAt": {
+            "$date": "2024-08-25T00:00:00.000+00:00"
+        }
+    }
+]
