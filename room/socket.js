@@ -28,7 +28,19 @@ function connect() {
             connection.socket = io('http://0.0.0.0:3000', {
                 path: "/beautyfy_vituals/",
                 transports: ['websocket'],
-                query: { roomType: 'schedule', user: identity } 
+                query: { roomType: 'schedule', email: identity } 
+            });
+
+            connection.socket.on('online_user_room_schedule', (users) => {
+                debugger
+                if(users) {
+                    let li = '';
+                    users
+                        .forEach(i => {
+                            li += `<li>${i.email}</li>`
+                        })
+                    document.querySelector("#onliUsers").innerHTML = li;
+                }
             });
 
             connection.socket.on('connect', () => {
@@ -41,10 +53,10 @@ function connect() {
                 document.querySelector("#txtID").classList.add('disabled');
                 this.btnDisconnect.classList.remove('disabled');
 
-                connection.socket.emit('authSessionRoomSchedule');
-                connection.socket.on('online_user_room_schedule', (users) => {
-                    debugger
-                });
+                setTimeout(() => {
+                    connection.socket.emit('authSessionRoomSchedule');
+                }, 3000);
+                
             });
 
             connection.socket.on('connect_error', (error) => {
